@@ -1,5 +1,5 @@
-def Build_Docker(String Dockerfile){
+def call(String ProjectName, String ImageTag, String DockerHubUser){
   echo "Building..."
-  sh "docker build -t ${Dockerfile} ."
+  sh "docker build -t ${DockerHubUser}/${ProjectName}:${ImageTag} ."
   echo "Building Finished!"
 }
